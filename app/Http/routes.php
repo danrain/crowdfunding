@@ -11,6 +11,12 @@
 |
 */
 
+use App\Http\Controllers\User\UserController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('about', 'PagesController@about');
+
+Route::resource('/api/users', 'UserController' );
